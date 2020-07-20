@@ -11,16 +11,13 @@
 <body>
     <div class="container">
         <div class="row" id="app">
-            <div class="list-group offset-4 col-4">
-                <a href="#" class="list-group-item list-group-item-action active">
-                  Chat Room
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+            
+            <ul class="list-group offset-4 col-4">
+                <li class="list-group-item active">Chat Room</li>
+                <example-component></example-component>
                 <input type="text" class="form-control" placeholder="Type your message" v-model='message' @keyup.enter='send'>
-              </div>
+               
+            </ul>
         </div>
     </div>
     

@@ -4,7 +4,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 
 const app = new Vue({
@@ -15,7 +15,9 @@ const app = new Vue({
 
     methods: {
         send() {
-            console.log(this.message);
+            if (this.message.length != 0) {
+                console.log(this.message);
+            }
         }
     }
 });
