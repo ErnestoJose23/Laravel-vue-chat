@@ -14,7 +14,7 @@
             
             <ul class="list-group offset-4 col-4">
                 <li class="list-group-item active">Chat Room</li>
-                <example-component></example-component>
+                <message></message>
                 <input type="text" class="form-control" placeholder="Type your message" v-model='message' @keyup.enter='send'>
                
             </ul>

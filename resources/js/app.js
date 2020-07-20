@@ -4,7 +4,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('message', require('./components/messageComponent.vue').default);
 
 
 const app = new Vue({
