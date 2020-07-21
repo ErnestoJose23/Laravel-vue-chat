@@ -49699,12 +49699,15 @@ Vue.component('message', __webpack_require__(/*! ./components/messageComponent.v
 var app = new Vue({
   el: '#app',
   data: {
-    message: ''
+    message: '',
+    chat: {
+      message: []
+    }
   },
   methods: {
     send: function send() {
       if (this.message.length != 0) {
-        console.log(this.message);
+        this.chat.message.push(this.message);
       }
     }
   }

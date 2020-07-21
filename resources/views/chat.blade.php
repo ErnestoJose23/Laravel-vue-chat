@@ -12,9 +12,10 @@
     <div class="container">
         <div class="row" id="app">
             
-            <ul class="list-group offset-4 col-4">
+            <ul class="list-group offset-4 col-4 mt-5">
                 <li class="list-group-item active">Chat Room</li>
-                <message></message>
+                <message
+                v-for="value in chat.message"></message>
                 <input type="text" class="form-control" placeholder="Type your message" v-model='message' @keyup.enter='send'>
                
             </ul>
