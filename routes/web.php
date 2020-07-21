@@ -8,3 +8,6 @@ Route::get('/', function () {
 
 
 Route::get('chat', 'ChatController@Chat');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

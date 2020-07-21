@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
@@ -10,7 +12,8 @@ class ChatController extends Controller
         return view('chat');
     }
 
-    public function send(){
-        event(new ChatEvent($message, $user));
+    public function send(request $request){
+        $user = User::find(Auth::id());
+        event(new ChatEvent($request->message, $user));
     }
 }
