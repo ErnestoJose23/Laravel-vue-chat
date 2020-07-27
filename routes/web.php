@@ -11,3 +11,5 @@ Route::get('chat', 'ChatController@Chat');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('send', 'ChatController@send');
