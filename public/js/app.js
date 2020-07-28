@@ -55961,8 +55961,20 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       if (this.message.length != 0) {
         this.chat.message.push(this.message);
         this.message = '';
+        axios.post('/send', {
+          message: this.message
+        }).then(function (response) {
+          console.log(response);
+        })["catch"](function (error) {
+          console.log(error);
+        });
       }
     }
+  },
+  mounted: function mounted() {
+    Echo["private"]('chat').listen('ChatEvent', function (e) {
+      console.log(e);
+    });
   }
 });
 

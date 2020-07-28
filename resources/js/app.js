@@ -45,6 +45,16 @@ const app = new Vue({
             if (this.message.length != 0) {
                 this.chat.message.push(this.message);
                 this.message = '';
+                axios.post('/send', {
+                    message: this.message
+
+                })
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
 
             }
         }

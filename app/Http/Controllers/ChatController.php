@@ -20,16 +20,18 @@ class ChatController extends Controller
         return view('chat');
     }
 
-    /*
+
     public function send(request $request){
+
+        return $request->all();
         $user = User::find(Auth::id());
         event(new ChatEvent($request->message, $user));
-    }*/
-
+    }
+/*
     public function send(){
         $message = "hola";
         $user = User::find(Auth::id());
         event(new ChatEvent($message, $user));
 
-    }
+    }*/
 }
