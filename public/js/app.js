@@ -55954,7 +55954,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     message: '',
     chat: {
       message: [],
-      user: []
+      user: [],
+      color: []
     }
   },
   methods: {
@@ -55963,6 +55964,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 
       if (this.message.length != 0) {
         this.chat.message.push(this.message);
+        this.chat.color.push('success');
         this.chat.user.push('you');
         axios.post('/send', {
           message: this.message
@@ -55981,7 +55983,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     Echo["private"]('chat').listen('ChatEvent', function (e) {
       _this2.chat.message.push(e.message);
 
-      _this2.chat.user.push(e.user); //console.log(e);
+      _this2.chat.user.push(e.user);
+
+      _this2.chat.color.push('warning'); //console.log(e);
 
     });
   }
